@@ -1,0 +1,43 @@
+<!--NAVIGATION BAR-->
+<nav class="navbar" >
+  <span class="open-slide" *ngIf="barVisibility">
+    <a (click)="openSlide()" >
+      <svg width="30" height="30" >
+        <path d="M0,5,30,5" stroke="#fff" stroke-width="5"></path>
+        <path d="M0,14,30,14" stroke="#fff" stroke-width="5"></path>
+        <path d="M0,23,30,23" stroke="#fff" stroke-width="5"></path>
+      </svg>
+    </a>
+  </span>
+  <a><b>Favorite 360</b></a>
+</nav>
+
+
+<div id="wrapper">
+
+  <!-- SIDE BAR -->
+  <div #sideMenu class="side-nav">
+    <button class="btn-close" (click)="closeSlide()">hide</button>
+    <div class="form-group-sm col-xs-11">
+      <label>View</label>
+      <select class="form-control" [(ngModel)]="View" >
+        <option *ngFor="let view of viewList">{{view}}</option>
+      </select>
+    </div>
+    <br/>
+    <div class="form-group-sm col-xs-11">
+      <label>Filter</label>
+      <select class="form-control" [(ngModel)]="Filter">
+        <option *ngFor="let filter of filterList">{{filter}}</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- DISPLAY CONTAINER -->
+  <div #main class="main">
+    <app-panormas [View]=View [Filter]=Filter></app-panormas>
+  </div>
+
+</div>
+
+

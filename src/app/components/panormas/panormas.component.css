@@ -1,0 +1,38 @@
+
+.thumbnail{
+  margin: 10px -5px;
+  position:relative;
+}
+
+.thumbnail a{
+  font-size: 22px;
+  color:red;
+  position: absolute;
+  top: 8px;
+  right:12px;
+  opacity: 0.7;
+}
+
+.thumbnail #title{
+  color:#ffffff;
+  font-size: 10px;
+  font-weight: 600;
+  position:absolute;
+  bottom: 10px;
+  left:6px;
+}
+
+.thumbnail #date{
+  font-size: 10px;
+  color:#ffffff;
+  font-weight: 600;
+  position:absolute;
+  bottom: 10px;
+  right:10px;
+}
+
+@media (max-width: 990px){
+  .thumbnail{
+    margin: 10px -10px;
+  }
+}
