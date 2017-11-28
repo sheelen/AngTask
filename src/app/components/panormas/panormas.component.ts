@@ -13,7 +13,7 @@ export class PanormasComponent implements OnInit {
   @Input() Filter: String;
 
   // Stores Panaromas returned from PanaromaService
-  private panormas;
+  panormas;
   // Stores Id of panormas that are marked as favorites
   favoritePanormas: String[]= [];
 
@@ -28,7 +28,7 @@ export class PanormasComponent implements OnInit {
   ngOnInit() {
     this.panormas = this.panormaDataService.getPanormas().subscribe(data => {
       this.panormas = data;
-      console.log(this.panormas);
+      //console.log(this.panormas);
     });
   }
 

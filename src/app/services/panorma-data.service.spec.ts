@@ -2,12 +2,12 @@ import {TestBed, inject, async, getTestBed} from '@angular/core/testing';
 
 import { PanormaDataService } from './panorma-data.service';
 import {HttpClientModule} from '@angular/common/http';
-import {ResponseOptions, XHRBackend} from "@angular/http";
-import {MockBackend} from "@angular/http/testing";
+import {ResponseOptions, XHRBackend} from '@angular/http';
+import {MockBackend} from '@angular/http/testing';
 
 
 
-describe('FancyService without the TestBed', () => {
+describe('Panorma data service', () => {
   let service, mockBackend;
 
   beforeEach(async(() => {

@@ -1,8 +1,7 @@
 
-  <h1>asdasd {{View}} {{Filter}}</h1>
-  <!-- GRID LAYOUT-->
+<!-- GRID LAYOUT-->
 
-  <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 col-xs-12 container-fluid" *ngIf="View==='Grid'">
+  <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 col-xs-12 container-fluid" id="gridLayout" *ngIf="View==='Grid'">
     <div class="row justify-content-md-center">
       <div *ngFor="let obj of panormas.items">
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12" *ngIf="Filter==='All'">
@@ -32,12 +31,12 @@
   </div>
 
   <!-- LIST LAYOUT-->
-  <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 col-xs-12  container-fluid" *ngIf="View==='List'" >
+  <div class="col-xl-11 col-lg-11 col-md-11 col-sm-12 col-xs-12  container-fluid" id="listLayout"  *ngIf="View==='List'" >
     <div *ngFor="let obj of panormas.items">
       <div class="well well-sm" *ngIf="Filter==='All'">
         <div class="row justify-content-md-center">
-          <div class="col-md-5 col-sm-5 col-xs-5">{{obj.data.title}}</div>
-          <div class="col-md-5 col-sm-5 col-xs-4">{{obj.data.created_at | date:'medium'}}</div>
+          <div class="dataTitle col-md-5 col-sm-5 col-xs-5">{{obj.data.title}}</div>
+          <div class="dataDate col-md-5 col-sm-5 col-xs-4">{{obj.data.created_at | date:'medium'}}</div>
           <div class="col-md-2 col-sm-2 col-xs-3">
             <span><button class="btn-success" (click)="addToFavorites(obj.id)" *ngIf="!checkIfAddedToFavorites(obj.id)">add</button></span>
             <span><button class="btn-info" (click)="removeFromFavorites(obj.id)" *ngIf="checkIfAddedToFavorites(obj.id)"> favorite</button></span>

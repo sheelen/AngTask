@@ -23,7 +23,7 @@ describe('Navigation and sidebar components', () => {
     comp = fixture.componentInstance;
   }));
 
-  it('View and filter options', async(() => {
+  it('View and filter options should have fixed values', async(() => {
     const view = fixture.debugElement.query(By.css('#viewVal')).nativeElement;
     const filter = fixture.debugElement.query(By.css('#filterVal')).nativeElement;
     fixture.detectChanges();
@@ -31,7 +31,7 @@ describe('Navigation and sidebar components', () => {
     expect(filter.textContent).toContain('All' || 'Favorites');
   }));
 
-  it('Visibility of toggle button on header', () => {
+  it('Visibility of toggle button on header must change when sidebar is expanded', () => {
 
     fixture.debugElement.query(By.css('#toggleButton2')).nativeElement.click();
     fixture.detectChanges();
