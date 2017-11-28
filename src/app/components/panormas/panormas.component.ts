@@ -28,7 +28,7 @@ export class PanormasComponent implements OnInit {
   ngOnInit() {
     this.panormas = this.panormaDataService.getPanormas().subscribe(data => {
       this.panormas = data;
-      //console.log(this.panormas);
+      console.log(this.panormas);
     });
   }
 

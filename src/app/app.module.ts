@@ -2,11 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PanormasComponent } from './components/panormas/panormas.component';
 import { PanormaDataService } from './services/panorma-data.service';
+import { PanormaInterceptor } from './services/Panorma.interceptor';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PanormaDataService } from './services/panorma-data.service';
     BrowserModule
   ],
   providers: [
-    PanormaDataService
+    PanormaDataService,
+    { provide: HTTP_INTERCEPTORS, useClass: PanormaInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })
