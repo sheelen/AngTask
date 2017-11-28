@@ -1,4 +1,5 @@
 
+/* Formatting of text and date for GridLayout */
 .thumbnail{
   margin: 10px -5px;
   position:relative;
@@ -21,6 +22,38 @@
   bottom: 10px;
   left:6px;
 }
+.well {
+  background:  	white;
+  width:100%;
+}
+
+
+/* Custom Buttons used on ListLayout */
+.customButton1 {
+  background: #fafafa;
+  border-radius: 10px;
+  font-family: Arial;
+  color: #c00707;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 4px 10px 4px 10px;
+  border: solid #c00707 2px;
+  text-decoration: none;
+}
+.customButton2 {
+  background: #c00707;
+  border-radius: 10px;
+  font-family: Arial;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  padding: 4px 10px 4px 10px;
+  text-decoration: none;
+}
+
+.customButton1, .customButton2:hover {
+  text-decoration: none;
+}
 
 .thumbnail #date{
   font-size: 10px;
@@ -29,6 +62,26 @@
   position:absolute;
   bottom: 10px;
   right:10px;
+
+}
+
+/* For making ListLayout Responsive */
+.col{
+  width:33.33%;
+  float:left;
+  padding-left:20px;
+}
+.col1{
+  text-align: left;
+  padding-top: 5px;
+}
+.col2{
+  text-align: right;
+  padding-top: 5px;
+}
+.col3{
+  text-align: center;
+  padding-right:20px;
 }
 
 @media (max-width: 990px){
@@ -36,3 +89,24 @@
     margin: 10px -10px;
   }
 }
+
+@media (max-width: 640px){
+  .col1{
+    width:50%;
+  }
+  .col2{
+    width:50%;
+    text-align: left;
+    float:right;
+    padding-right:20px;
+  }
+  .col3{
+    width:100%;
+  }
+  .customButton2, .customButton1{
+    width:100%;
+  }
+}
+
+
+
