@@ -19,7 +19,7 @@ export class AppComponent implements  AfterViewInit {
   View: String = 'Grid';
   Filter: String = 'All';
 
-  constructor(private renderer: Renderer,) {
+  constructor(private renderer: Renderer) {
   }
 
   /*
